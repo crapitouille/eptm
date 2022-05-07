@@ -1,0 +1,7 @@
+az account list
+
+az account set -s xxxxxxxxxxxxxxxxxxx
+
+az group create -l WestEurope -n RG-VM
+
+az group list
