@@ -1,0 +1,6 @@
+#Création de la VM
+az vm create -n VM01 -g RG-VM --size Standard_DS1_v2 --image Win2019Datacenter --subnet "/subscriptions/xxxxx/resourceGroups/RG-Network/providers/Microsoft.Network/virtualNetworks/vnet-demo01/subnets/Subnet01"
+
+
+#Deallocate (stop)
+az vm deallocate -g RG-VM -n VM01
