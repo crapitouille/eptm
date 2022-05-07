@@ -1,0 +1,7 @@
+# Création du VNET
+az network vnet create --resource-group RG-Network --name vnet-demo01 --address-prefix "10.0.0.0/16"  --location "WestEurope" --subnet-name Subnet01 --subnet-prefix "10.0.1.0/24"
+
+
+#Ajout d'une deuxième Subnet
+az network vnet subnet create --address-prefix "10.0.2.0/24" --name Subnet02 --resource-group RG-Network --vnet-name vnet-demo01
+
