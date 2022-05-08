@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VMName": {
+            "value": "VMTEST01"
+          },
+      "adminUsername": {
+        "value": "myadmin"
+      },
+      "adminPassword": {
+        "reference": {
+          "keyVault": {
+            "id": "COPY ID FROM PROPERTIES OF KEYVAULT"
+          },
+          "secretName": "myadmin"
+        }
+      },
+      "VNETResourceGroup": {
+        "value": "RG-Network"
+      },
+      "VNETName": {
+        "value": "vnet-demo01"
+      },
+      "SubnetName": {
+        "value": "subnet01"
+      },
+      "vmSize": {
+        "value": "Standard_D4s_v3"
+      },
+      "SubscriptionID": {
+        "value": "YOUR SUBSCRIPTION ID"
+      }
+    }
+  }
