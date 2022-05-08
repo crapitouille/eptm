@@ -1,0 +1,2 @@
+# Upload the two files to Azure CLI before executing this command
+New-AzResourceGroupDeployment -Name "deploy1" -ResourceGroupName RG-VM -TemplateFile .\VM-template.json -TemplateParameterFile .\VM-template_parameters.json
